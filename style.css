@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+ 
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    background-color: #8ec640;
+    margin: 0; /* Elimina márgenes por defecto del navegador */
+}
+ 
+/* --- SLIDESHOW --- */
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin: 0 auto 30px auto; /* Centra el contenedor horizontalmente */
+}
+ 
+.slide-wrapper {
+    width: 3640px; /* 728px * 5 imágenes */
+    animation: slide 25s infinite ease-in-out;
+}
+ 
+/* Agrupamos estilos comunes de las imágenes para no repetir código */
+.imgUno, .imgDos, .imgTres, .imgCuatro, .imgCinco {
+    margin-top: 30px;
+    float: left;
+    height: 510px;
+    width: 728px;
+    background-size: cover; /* Se asegura que la imagen cubra todo el espacio */
+    background-position: center;
+}
+ 
+/* Rutas de ejemplo - ¡Asegúrate de poner tus archivos reales! */
+.imgUno { background-image: url('img1.jpg'); }
+.imgDos { background-image: url('img2.jpg'); }
+.imgTres { background-image: url('img3.jpg'); }
+.imgCuatro { background-image: url('img4.jpg'); }
+.imgCinco { background-image: url('img5.jpg'); }
+ 
+@keyframes slide {
+    0%, 15% { margin-left: 0; }
+    20%, 35% { margin-left: -728px; }
+    40%, 55% { margin-left: -1456px; }
+    60%, 75% { margin-left: -2184px; }
+    80%, 95% { margin-left: -2912px; }
+    100% { margin-left: 0; }
+}
+ 
+/* --- MENÚ --- */
+.menuSticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Se asegura que el menú quede por encima de todo */
+}
+ 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+ 
+li {
+    float: left;
+}
+ 
+.opcion, .dropbtn {
+    display: inline-block;
+    font-family: "New Rocker", sans-serif; /* Coma añadida */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+ 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: "New Rocker" sans-serif;
+    color:rgb(255, 255, 255)
+}
+ 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#abajo {
+    height: 900px;
+    width: flex;
+    margin: 0 auto;
+    margin-top: 500px;
+    background-image: url(images/Type_O_Negative_logo.jpg);
+    font-family: "New Rocker" sans-serif;
+    color:rgb(255, 255, 255)
+}
